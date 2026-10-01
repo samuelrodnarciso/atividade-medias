@@ -1,0 +1,9 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== PROGRAMA DE MÉDIAS ===");
+        System.out.println("Este programa calcula a média de 5 alunos e a média da turma.");
+        System.out.println("Instruções: Digite os dados solicitados a seguir.");
+    }
+}
