@@ -7,3 +7,20 @@ public class Main {
         System.out.println("Instruções: Digite os dados solicitados a seguir.");
     }
 }
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== PROGRAMA DE MÉDIAS ===");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite a nota 1 do aluno: ");
+        double nota1 = sc.nextDouble();
+
+        System.out.print("Digite a nota 2 do aluno: ");
+        double nota2 = sc.nextDouble();
+
+        sc.close();
+    }
+}
