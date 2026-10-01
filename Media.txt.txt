@@ -5,22 +5,36 @@ public class Main {
         System.out.println("=== PROGRAMA DE MÉDIAS ===");
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Digite a nota 1: ");
-        double nota1 = sc.nextDouble();
-        System.out.print("Digite a nota 2: ");
-        double nota2 = sc.nextDouble();
+        String[] nomes = new String[5];
+        double[] medias = new double[5];
+        double somaTurma = 0.0;
 
-        double media = (nota1 + nota2) / 2.0;
-        System.out.println("Média: " + media);
-
-        // Exibe o resultado com base na média
-        if (media >= 7.0) {
-            System.out.println("Resultado: Aprovado");
-        } else if (media >= 5.0) {
-            System.out.println("Resultado: Recuperação");
-        } else {
-            System.out.println("Resultado: Reprovado");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("\nNome do aluno " + (i + 1) + ": ");
+            nomes[i] = sc.next();
+            System.out.print("Nota 1: ");
+            double n1 = sc.nextDouble();
+            System.out.print("Nota 2: ");
+            double n2 = sc.nextDouble();
+            medias[i] = (n1 + n2) / 2.0;
+            somaTurma += medias[i]; // Acumula para a média da turma
         }
+
+        System.out.println("\n=== RESULTADOS ===");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Aluno: " + nomes[i] + " | Média: " + medias[i] + " | ");
+            if (medias[i] >= 7.0) {
+                System.out.println("Aprovado");
+            } else if (medias[i] >= 5.0) {
+                System.out.println("Recuperação");
+            } else {
+                System.out.println("Reprovado");
+            }
+        }
+
+        // Calcula e exibe a média da turma
+        double mediaTurma = somaTurma / 5.0;
+        System.out.println("\nMédia geral da turma: " + mediaTurma);
 
         sc.close();
     }
